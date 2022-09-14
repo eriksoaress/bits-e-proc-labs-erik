@@ -16,7 +16,7 @@ def runAdder2bits():
     s = ConcatSignal(*reversed(s_))
     carry = Signal(bool(0))
 
-    dut = adder2bits(x_, y_, s_, carry)
+    dut = adderModbv(x_, y_, s_, carry)
 
     @instance
     def stimulus():

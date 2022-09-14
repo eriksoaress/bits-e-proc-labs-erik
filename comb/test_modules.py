@@ -78,3 +78,19 @@ def test_exe3():
     dut = exe3(q, a, b, c, d, e)
     sim = Simulation(dut, stimulus)
     sim.run()
+
+    
+def test_bin2bcd():
+    @instance
+    def stimulus():
+        b.next = 12
+        yield delay(1)
+        assert dig0 == 2
+        assert dig1 == 1
+
+    b = Signal(modbv(0))
+    dig0 = Signal(modbv(0))
+    dig1 = Signal(modbv(0))
+    dut = bin2bcd(b, dig1, dig0)
+    sim = Simulation(dut, stimulus)
+    sim.run()
