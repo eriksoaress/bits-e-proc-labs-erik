@@ -18,7 +18,7 @@ def exe1(q, a, b):
 
     @always_comb
     def comb():
-        q.next = a
+        q.next = a or (not b)
 
     return instances()
 
@@ -44,7 +44,7 @@ def exe2(q, a, b, c):
 
     @always_comb
     def comb():
-        q.next = a
+        q.next = b and c or ((not b) and (not c))
 
     return instances()
 
@@ -72,7 +72,7 @@ def exe3(q, a, b, c, d, e):
 
     @always_comb
     def comb():
-        q.next = a
+        q.next = ((((a or b)and c)and d)and e)
 
     return instances()
 
@@ -119,33 +119,33 @@ def bin2hex(hex0, sw):
         if sw[4:0] == 0:
             hex0.next = "1000000"
         elif sw[4:0] == 1:
-            hex0.next = "1000000"
+            hex0.next = "1001111"
         elif sw[4:0] == 2:
-            hex0.next = "1000000"
+            hex0.next = "0100100"
         elif sw[4:0] == 3:
-            hex0.next = "1000000"
+            hex0.next = "0110000"
         elif sw[4:0] == 4:
-            hex0.next = "1000000"
+            hex0.next = "0011001"
         elif sw[4:0] == 5:
-            hex0.next = "1000000"
+            hex0.next = "0010010"
         elif sw[4:0] == 6:
-            hex0.next = "1000000"
+            hex0.next = "0000010"
         elif sw[4:0] == 7:
-            hex0.next = "1000000"
+            hex0.next = "1111000"
         elif sw[4:0] == 8:
-            hex0.next = "1000000"
+            hex0.next = "0000000"
         elif sw[4:0] == 9:
-            hex0.next = "1000000"
+            hex0.next = "0010000"
         elif sw[4:0] == 10:
-            hex0.next = "1000000"
+            hex0.next = "0001000"
         elif sw[4:0] == 11:
-            hex0.next = "1000000"
+            hex0.next = "0000011"
         elif sw[4:0] == 12:
-            hex0.next = "1000000"
+            hex0.next = "1000110"
         elif sw[4:0] == 13:
-            hex0.next = "1000000"
+            hex0.next = "0100001"
         elif sw[4:0] == 14:
-            hex0.next = "1000000"
+            hex0.next = "0000110"
         else:
             hex0.next = "1000000"
 
