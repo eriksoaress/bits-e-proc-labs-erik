@@ -8,3 +8,4 @@ requests
 python-slugify
 unicode
 git+https://github.com/insper-classroom/telementry-client-py
+git+https://github.com/insper/bits-e-proc-tools
