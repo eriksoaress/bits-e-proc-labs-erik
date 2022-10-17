@@ -3,4 +3,5 @@
 ; Criado por: Luciano Soares
 ; Data: 27/03/2017
 
-; faz uma subtracao binaria do valor de :  RAM[1] - RAM[0] gravando em RAM[2].
+; Multiplica o valor de RAM[1] com RAM[0] salvando em RAM[3]
+; Assuma valores inteiros
